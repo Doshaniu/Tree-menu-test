@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Меню</title>
+    <style>
+      li.active > strong {
+        color: red;
+      }
+      li.parent-active > a {
+        color: blue;
+        font-weight: bold;
+      }
+    </style>
+</head>
+<body>
+    {% load menu_tags %}
+    
+    <h2>Main Menu</h2>
+    {% draw_menu 'main_menu' %}
+    
+    <hr>
+    
+    <h2>Middle Menu</h2>
+    {% draw_menu 'middle_menu' %}
+    
+    <hr>
+    
+    <h2>Footer Menu</h2>
+    {% draw_menu 'footer_menu' %}
+    
+    <hr>
+    
+    {% block content %}{% endblock %}
+    
+</body>
+</html>

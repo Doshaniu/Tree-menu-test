@@ -1,0 +1,92 @@
+[
+  {
+    "model": "menu.menuitem",
+    "pk": 1,
+    "fields": {"title": "Каталог", "slug": "catalog", "name": "main_menu", "parent": null}
+  },
+  {
+    "model": "menu.menuitem",
+    "pk": 2,
+    "fields": {"title": "Телефоны", "slug": "phones", "name": "main_menu", "parent": 1}
+  },
+  {
+    "model": "menu.menuitem",
+    "pk": 3,
+    "fields": {"title": "Айфон", "slug": "iphone", "name": "main_menu", "parent": 2, "url": "/catalog/phones/iphone/"}
+  },
+  {
+    "model": "menu.menuitem",
+    "pk": 4,
+    "fields": {"title": "Самсунг", "slug": "samsung", "name": "main_menu", "parent": 2, "url": "/catalog/phones/samsung/"}
+  },
+  {
+    "model": "menu.menuitem",
+    "pk": 5,
+    "fields": {"title": "Ноутбуки", "slug": "notebooks", "name": "main_menu", "parent": 1, "url": "/catalog/notebooks/"}
+  },
+  {
+    "model": "menu.menuitem",
+    "pk": 6,
+    "fields": {"title": "Sony", "slug": "sony", "name": "main_menu", "parent": 5, "url": "/catalog/notebooks/sony/"}
+  },
+  {
+    "model": "menu.menuitem",
+    "pk": 7,
+    "fields": {"title": "MSI", "slug": "msi", "name": "main_menu", "parent": 5, "url": "/catalog/notebooks/msi/"}
+  },
+  {
+    "model": "menu.menuitem",
+    "pk": 8,
+    "fields": {"title": "Рабочой", "slug": "work", "name": "main_menu", "parent": 7}
+  },
+  {
+    "model": "menu.menuitem",
+    "pk": 9,
+    "fields": {"title": "Игровой", "slug": "gaming", "name": "main_menu", "parent": 7}
+  },
+  {
+    "model": "menu.menuitem",
+    "pk": 10,
+    "fields": {"title": "Одежда", "slug": "clothes", "name": "middle_menu", "parent": null}
+  },
+  {
+    "model": "menu.menuitem",
+    "pk": 11,
+    "fields": {"title": "Обувь", "slug": "shoes", "name": "middle_menu", "parent": 10}
+  },
+  {
+    "model": "menu.menuitem",
+    "pk": 12,
+    "fields": {"title": "кроссовки", "slug": "sneakers", "name": "middle_menu", "parent": 11}
+  },
+  {
+    "model": "menu.menuitem",
+    "pk": 13,
+    "fields": {"title": "Ботинки", "slug": "boots", "name": "middle_menu", "parent": 11}
+  },
+  {
+    "model": "menu.menuitem",
+    "pk": 14,
+    "fields": {"title": "Верхняя одежда", "slug": "outerwear", "name": "middle_menu", "parent": 10}
+  },
+  {
+    "model": "menu.menuitem",
+    "pk": 15,
+    "fields": {"title": "Мужская одежда", "slug": "mens-clothes", "name": "middle_menu", "parent": 14}
+  },
+  {
+    "model": "menu.menuitem",
+    "pk": 16,
+    "fields": {"title": "Фигурки", "slug": "figures", "name": "footer_menu", "parent": null}
+  },
+  {
+    "model": "menu.menuitem",
+    "pk": 17,
+    "fields": {"title": "Фигурки из видеоигр", "slug": "game-figures", "name": "footer_menu", "parent": 16}
+  },
+  {
+    "model": "menu.menuitem",
+    "pk": 18,
+    "fields": {"title": "Фигурки из аниме", "slug": "anime-figures", "name": "footer_menu", "parent": 16}
+  }
+]

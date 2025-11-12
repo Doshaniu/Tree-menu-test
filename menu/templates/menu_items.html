@@ -1,0 +1,25 @@
+{% with item=node.item children=node.children %}
+  {% if item.id == active_item.id %}
+    <li class="active">
+      <strong>{{ item.title }}</strong>
+  {% elif item.id in parents %}
+    <li class="parent-active">
+      <a href="{{ item.get_url }}">{{ item.title }}</a>
+  {% else %}
+    <li>
+      <a href="{{ item.get_url }}">{{ item.title }}</a>
+  {% endif %}
+
+
+  {% if children %}
+    {% if item.id == active_item.id or item.id in parents %}
+      <ul>
+        {% for child in children %}
+          {% include "menu_items.html" with node=child current_path=current_path active_item=active_item parents=parents %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endif %}
+
+  </li>
+{% endwith %}

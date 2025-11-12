@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load menu_tags %}
+
+{% block content %}
+  <h1>{{ item.title }}</h1>
+  <p>URL: {{ item.get_url }}</p>
+  <p>Slug: {{ item.slug }}</p>
+
+  <h3>Дочерние элементы:</h3>
+  <ul>
+    {% for child in item.children.all %}
+      <li>
+        <a href="{{ child.get_url }}">{{ child.title }}</a>
+      </li>
+    {% empty %}
+      <li>Нет дочерних элементов</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
